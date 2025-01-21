@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEPO - Global Engagement & Partnerships Office</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Chatbot Styles */
+    .chat-bubble {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #0078d4;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .chat-bubble:hover {
+      transform: scale(1.1);
+    }
+
+    .chatbox {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 350px;
+      max-height: 500px;
+      background-color: rgba(255, 255, 255, 0.73);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: none;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    .chatbox-header {
+      background-color: #0078d4;
+      color: white;
+      padding: 10px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chatbox-body {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    .chatbox-footer {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+    }
+
+    .chatbox-footer input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .chatbox-footer button {
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .chatbox-footer button:hover {
+      background-color: #005a9e;
+    }
+
+    .chat-message {
+      margin-bottom: 10px;
+    }
+
+    .chat-message.user {
+      text-align: right;
+      color: #0078d4;
+    }
+
+    .chat-message.bot {
+      text-align: left;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <img src="jis-logo.png" alt="JIS Logo" class="h-12">
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#about" class="hover:text-blue-300">About Us</a></li>
+          <li><a href="#partnerships" class="hover:text-blue-300">Global Partnerships</a></li>
+          <li><a href="#programs" class="hover:text-blue-300">Programs</a></li>
+          <li><a href="#resources" class="hover:text-blue-300">Resources</a></li>
+          <li><a href="#events" class="hover:text-blue-300">News & Events</a></li>
+          <li><a href="#contact" class="hover:text-blue-300">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-screen" style="background-image: url('bg-img2.png');">
+    <div class="absolute inset-0 bg-blue-900 bg-opacity-50 flex items-center justify-center">
+      <div class="text-center text-white px-6">
+         <!-- Embedding autoType.html using iframe -->
+  
+    <iframe src="autoType.html" width="100%" height="300" class="border-0"></iframe>
+
+        <div class="space-x-4">
+          <button class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-md hover:bg-yellow-300 transition">
+            Partner with Us
+          </button>
+          <button class="bg-white text-blue-900 px-6 py-3 rounded-md hover:bg-gray-200 transition">
+            Join a Program
+          </button>
+          <button
+            class="bg-transparent border border-yellow-400 text-yellow-400 px-6 py-3 rounded-md hover:bg-yellow-400 hover:text-blue-900 transition">
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section id="quick-links" class="py-12 bg-blue-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-bold text-center mb-6">Quick Links</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Study Abroad Programs</h3>
+          <p class="text-gray-600">Explore opportunities to study in prestigious institutions worldwide.</p>
+          <a href="#study-abroad" class="text-blue-600 hover:underline mt-4 block">Learn More</a>
+        </div>
+        <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">International Admissions</h3>
+          <p class="text-gray-600">Find out how to join our institution as an international student.</p>
+          <a href="#admissions" class="text-blue-600 hover:underline mt-4 block">Learn More</a>
+        </div>
+        <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Research Collaborations</h3>
+          <p class="text-gray-600">Join hands with global institutions for groundbreaking research.</p>
+          <a href="#research" class="text-blue-600 hover:underline mt-4 block">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-6">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 GEPO. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chat-bubble" id="chat-bubble">💬</div>
+  <div class="chatbox" id="chatbox">
+    <div class="chatbox-header">
+      <span>ChatGPT Assistant</span>
+      <button id="close-chatbox">&times;</button>
+    </div>
+    <div class="chatbox-body" id="chatbox-body"></div>
+    <div class="chatbox-footer">
+      <input type="text" id="chat-input" placeholder="Type your message here...">
+      <button id="send-button">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const chatBubble = document.getElementById("chat-bubble");
+    const chatbox = document.getElementById("chatbox");
+    const closeChatbox = document.getElementById("close-chatbox");
+    const chatInput = document.getElementById("chat-input");
+    const sendButton = document.getElementById("send-button");
+    const chatboxBody = document.getElementById("chatbox-body");
+
+    // Toggle chatbox visibility
+    chatBubble.addEventListener("click", () => {
+      chatbox.style.display = "flex";
+      chatBubble.style.display = "none";
+    });
+
+    closeChatbox.addEventListener("click", () => {
+      chatbox.style.display = "none";
+      chatBubble.style.display = "flex";
+    });
+
+    // Simulate chatbot response
+    sendButton.addEventListener("click", () => {
+      const userMessage = chatInput.value.trim();
+      if (userMessage) {
+        const userMsgElement = `<div class="chat-message user">${userMessage}</div>`;
+        chatboxBody.innerHTML += userMsgElement;
+
+        setTimeout(() => {
+          const botMessage = `<div class="chat-message bot">I’m here to help! What can I assist you with?</div>`;
+          chatboxBody.innerHTML += botMessage;
+          chatboxBody.scrollTop = chatboxBody.scrollHeight;
+        }, 1000);
+
+        chatInput.value = "";
+      }
+    });
+  </script>
+</body>
+
+</html>
