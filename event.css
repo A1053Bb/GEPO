@@ -24,6 +24,15 @@
     overflow-y: scroll;
 }
 
+.calender::-webkit-scrollbar {
+    display: none;
+}
+
+.calender {
+    scrollbar-width: none;
+}
+
+
 .main-header {
     font-family: "Montserrat";
     font-weight: 400;
@@ -232,4 +241,32 @@
 #tit {
     text-shadow: 2px 2px 4px rgba(255, 252, 67, 0.5);
     color: #fff;
+}
+
+.sub-1 {
+    height: auto;
+    /* overflow-y: scroll; */
+    background-color: var(--primary-color);
+}
+
+.sub-2 {
+    height: auto;
+    /* overflow-y:scroll; */
+}
+
+.slides {
+    height: 300px;
+    object-fit: fill;
+}
+
+.slide {
+    height: 360px;
+}
+
+.body-1 {
+    background: var(--backround-color);
+}
+
+.slides-info {
+    color: #f4f4f4;
 }
