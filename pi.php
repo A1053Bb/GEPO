@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./pi_map.css">
   </head>
   <body>
     <div class="loading" id="loadingOverlay" >
@@ -44,17 +49,10 @@
             <div class="d-flex flex-row">
                 <div class="container slides-info">
                     <div class="slide1">
-                        <h2 class="pt-2 text-center first">Study Abroad Programs</h5><br>
-                        Our Study Abroad Programs offer students an enriching <br>
-                        opportunity to experience education in an international<br> 
-                        context. These programs are designed to foster global <br>
-                        perspectives, enhance language skills, and promote <br>
-                        cultural exchange, allowing students to broaden their <br>
-                        horizons while earning academic credit.
-                        <br>
-                        Come and join our partner universities all over
-                        <br>
-                        the world such as 
+                        <h2 class="pt-2 text-center first">
+                          <?php include 'pi_1.php'; echo $title1; ?>
+                        </h2><br>
+                          <?php include 'pi_1.php'; echo $description1; ?> 
                         <span class="auto-text"></span>
                         <br>
                         Information on partner universities :- <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#s11">Click Here</button>
@@ -62,25 +60,28 @@
                         We have scholarships also :- <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#s12">Click Here</button>
                     </div>
                 </div>
-                <img src="images/OIP.jpeg" class="d-block w-100 slides flex-grow-1" alt="...">
+                <img src="<?php include 'pi_1.php'; echo $image1; ?>" class="d-block w-100 slides flex-grow-1" alt="...">
             </div>
           </div>
           <div class="modal fade" id="s11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable">
-              <div class="modal-content">
+            <div class="modal-dialog modal-dialog-scrollable  modal-xl">
+              <div class="modal-content map-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Information on partner universities</h1>
+                  <h1 class="modal-title fs-5" id="exampleModalLabel1">Information on partner universities</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  Our Study Abroad Programs collaborate with a diverse range of esteemed partner
-                  universities across the globe. Some of these include:<br>
-                  (i) University of Global Studies (USA): Renowned for its innovative programs 
-                      in international relations and environmental science.<br>
-                  (ii) International Institute of Technology (Germany): Offers cutting-edge 
-                      courses in engineering and computer science with a strong focus on 
-                      research and development.<br>
-                  (iii) Cultural University of Tokyo (Japan): Known for its emphasis on cultural studies, language immersion, and arts programs.<br>
+                  <div id="map"></div>
+                  <div id="myModal" class="mapmodal">
+                    <div class="modal-map" id="mycontent">
+                      <span class="close">&times;</span>
+                      <div class="map_content">
+                        <h2 id="modal-title"></h2>
+                        <p id="modal-description"></p>
+                      </div>
+                      <div class="images" id="modal-images"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,50 +107,43 @@
             <div class="d-flex flex-row">
                 <div class="container slides-info">
                     <div class="slide1">
-                        <h2 class="pt-2 text-center first">Faculty & Research Exchange</h2><br><br>
-                        Our Faculty & Research Exchange program is designed to<br> 
-                        foster collaboration and innovation in academic<br> 
-                        research and teaching methodologies across institutions<br> 
-                        worldwide. This initiative promotes the sharing of<br> 
-                        knowledge, expertise, and best practices, enhancing the<br> 
-                        educational experience for both faculty members and<br> 
-                        students in all our partner universities such as<br>
+                        <h2 class="pt-2 text-center first">
+                          <?php include 'pi_1.php'; echo $title2; ?>
+                        </h2><br><br>
+                          <?php include 'pi_1.php'; echo $description2; ?>
                         <br>
                         <span class="auto-text1"></span>
                     </div>
                 </div>
-                <img src="images/faculty.jpg" class="d-block w-100 slides flex-grow-1" alt="...">
+                <img src="<?php include 'pi_1.php'; echo $image2; ?>" class="d-block w-100 slides flex-grow-1" alt="...">
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="10000">
             <div class="d-flex flex-row">
                 <div class="container slides-info w-50">
                     <div class="slide1">
-                        <h2 class="pt-2 text-center first">Short-term Study Tours</h2><br><br>
-                        Our Short-term Study Tours program offers students the unique opportunity to immerse<br> 
-                        themselves in diverse cultures while gaining hands-on experience in their field of study.<br> 
-                        These carefully curated tours combine educational components with experiential learning,<br> 
-                        allowing participants to explore various academic themes through direct interaction with<br> 
-                        local communities, industries, and academic institutions.
+                        <h2 class="pt-2 text-center first">
+                          <?php include 'pi_1.php'; echo $title3; ?>
+                        </h2><br><br>
+                          <?php include 'pi_1.php'; echo $description3; ?>
                     </div>
                 </div>
-                <img src="images/slide3.jpg" class="d-block w-50 slides" alt="...">
+                <img src="<?php include 'pi_1.php'; echo $image3; ?>" class="d-block w-50 slides" alt="...">
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="10000">
             <div class="d-flex flex-row">
                 <div class="container slides-info w-50" >
                     <div class="slide1">
-                        <h2 class="pt-2 text-center first">Internships & Work Placements</h2><br><br>
-                        Our Internships & Work Placements program is designed to bridge the gap between<br> 
-                        academic learning and real-world experience. This initiative provides students with the<br>  
-                        chance to gain invaluable hands-on experience in their chosen fields while developing<br>  
-                        essential professional skills.
+                        <h2 class="pt-2 text-center first">
+                          <?php include 'pi_1.php'; echo $title4; ?>
+                        </h2><br><br>
+                          <?php include 'pi_1.php'; echo $description4; ?>
                         <br>
                         <span class="auto-text2"></span>
                     </div>
                 </div>
-                <img src="images/slide4.jpg" class="d-block w-50 slides" alt="...">
+                <img src="<?php include 'pi_1.php'; echo $image4; ?>" class="d-block w-50 slides" alt="...">
             </div>
           </div>
         </div>
@@ -172,5 +166,6 @@
             loadingOverlay.style.display = 'none';
         }, 2000); // Adjust the time as needed
     </script>
+    <script src="pi_map.js"></script>
   </body>
 </html>
