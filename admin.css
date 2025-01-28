@@ -1,7 +1,93 @@
-.heading {
-    background: rgb(0, 248, 198);
-    height: 100px;
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align cards from the top */
+    flex-direction: column;
+    height: 100vh;
 }
-.title {
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+
+header {
+    background-color: #3a517c;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    gap: 20px; /* Adds space between the cards */
+}
+
+/* Card Styling */
+.card {
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.edit-button {
+    padding: 12px 24px;
+    background-color: #4CAF50;  /* A fresh green color */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;  /* Rounded, pill-shaped button */
+    font-size: 14px;
+    font-weight: 500;  /* Subtle boldness for uniqueness */
+    text-align: center;
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transform and shadow */
+}
+
+.edit-button:hover {
+    transform: scale(1.05);  /* Slightly enlarge the button for a subtle effect */
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.3);  /* Add soft shadow on hover */
 }
