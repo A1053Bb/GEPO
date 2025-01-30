@@ -5,22 +5,20 @@ const chatInput = document.getElementById("chat-input");
 const sendButton = document.getElementById("send-button");
 const chatboxBody = document.getElementById("chatbox-body");
 
-
-var toggleOpen = document.getElementById('toggleOpen');
-var toggleClose = document.getElementById('toggleClose');
-var collapseMenu = document.getElementById('collapseMenu');
+var toggleOpen = document.getElementById("toggleOpen");
+var toggleClose = document.getElementById("toggleClose");
+var collapseMenu = document.getElementById("collapseMenu");
 
 function handleClick() {
-  if (collapseMenu.style.display === 'block') {
-    collapseMenu.style.display = 'none';
+  if (collapseMenu.style.display === "block") {
+    collapseMenu.style.display = "none";
   } else {
-    collapseMenu.style.display = 'block';
+    collapseMenu.style.display = "block";
   }
 }
 
-toggleOpen.addEventListener('click', handleClick);
-toggleClose.addEventListener('click', handleClick);
-
+toggleOpen.addEventListener("click", handleClick);
+toggleClose.addEventListener("click", handleClick);
 
 document.addEventListener("DOMContentLoaded", () => {
   // Elements for profile dropdown toggle
@@ -36,19 +34,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Close dropdown when clicking outside
     document.addEventListener("click", (event) => {
-      if (!profileButton.contains(event.target) && !profileDropdown.contains(event.target)) {
+      if (
+        !profileButton.contains(event.target) &&
+        !profileDropdown.contains(event.target)
+      ) {
         profileDropdown.classList.add("hidden");
       }
     });
   }
 });
+// adminForm.addEventListener("submit", async (e) => {
+//   e.preventDefault();
+//   const formData = new FormData(adminForm);
+
+//   const response = await fetch("register_admin.php", {
+//     method: "POST",
+//     body: formData,
+//   });
+
+//   const result = await response.text();
+//   alert(result);
+//   adminRegistration.classList.add("hidden");
+// });
 
 // Admin Login Form
-const adminRegisterToggle = document.getElementById('admin-register-toggle');
+const adminRegisterToggle = document.getElementById("admin-register-toggle");
 // Add a click event listener to the button
-adminRegisterToggle.addEventListener('click', function () {
+adminRegisterToggle.addEventListener("click", function () {
   // Redirect to the admin_login.html page when the button is clicked
-  window.location.href = 'admin_login.html'; // Use your relative path here if needed
+  window.location.href = "admin_login.html"; // Use your relative path here if needed
 });
 
 // Toggle chatbox visibility
