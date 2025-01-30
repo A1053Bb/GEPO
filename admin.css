@@ -1,12 +1,12 @@
 .heading {
-    background: rgb(0, 248, 198);
+    background: rgb(122, 174, 230);
     height: 120px;
 }
 .title {
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
 }
 .card-cont {
-    background: rgb(0, 248, 198);
+    background: rgb(122, 174, 230);
     height: max-content;
 }
 
@@ -27,7 +27,7 @@
     margin-right: 20px;
 }
 .main {
-    background: rgb(0, 248, 198);
+    background: rgb(122, 174, 230);
 }
 .underline {
     text-decoration: underline;
