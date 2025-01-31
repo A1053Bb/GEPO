@@ -1,3 +1,4 @@
+<?php include 'event_image.php'; ?>
 <!doctype html>
 <html lang="en">
 
@@ -82,39 +83,26 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body body-1">
                         <div class="row">
-                            <div class="col">
-                                <img src="images/faculty.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col">
-                                <img src="images/faculty.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col">
-                                <img src="images/faculty.jpg" class="img-fluid" alt="">
-                            </div>
+                        <?php 
+                        foreach ($mediaItems as $index => $item) {
+                            if ($index % 3 == 0 && $index != 0) {
+                                echo '</div><div class="row pt-2">'; // Start a new row after every 3 items
+                            }
+                            if ($item['type'] == 'image') {
+                                echo '<div class="col">
+                                        <img src="' . htmlspecialchars($item['path']) . '" class="img-fluid" alt="">
+                                    </div>';
+                            } elseif ($item['type'] == 'video') {
+                                echo '<div class="col">
+                                        <video class="img-fluid" controls>
+                                            <source src="' . htmlspecialchars($item['path']) . '" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>';
+                            }
+                        }
+                        ?>
                         </div>
-                        <div class="row pt-2">
-                            <div class="col">
-                                <img src="images/faculty.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col">
-                                <img src="images/faculty.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col">
-                                <img src="images/faculty.jpg" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Accordion Item #3
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                     </div>
                 </div>
                 </div>
