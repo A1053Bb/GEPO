@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <img src="Images/logo.png" alt="Logo">
+        <img src="Images/jis-logo.png" alt="Logo">
         <h1>Contact and Support</h1>
     </header>
 
@@ -50,11 +50,11 @@
         </form>
         <div class="contact-info">
         <h3>Contact Us</h3><br>
-        <div><img src="Images/Add_icon.png" alt="Address Icon"><strong>Address:</strong> 157/F, Nilgunj Rd, Sahid Colony, Panihati, Khardaha, West Bengal 700114</div><br>
-        <div><img src="Images/phone_logo.png"Phone Icon"><strong>General Enquiry:</strong> +91 83 2289 9853 / 3944 / 5323 (Mon-Sat 10:00am - 7:00pm)</div><br>
-        <div><img src="Images/phone_logo.png" alt="Admission Icon"><strong>Admission Enquiry:</strong> +91 95124 78527 / 98531 32153</div><br>
-        <div><img src="Images/mail_logo.png" alt="Mail Icon"><strong>Mail:</strong> <a href="mailto:info@jisgroup.org">info@xyz.org</a> (24 x 7 online support)</div><br>
-        <div><img src="Images/mail_logo.png" alt="Career Icon"><strong>Career:</strong> <a href="mailto:career@jisgroup.org">career@xyz.org</a> (Send your resume)</div><br>
+        <div><img src="Add_icon.png" alt="Address Icon"><strong>Address:</strong> 157/F, Nilgunj Rd, Sahid Colony, Panihati, Khardaha, West Bengal 700114</div><br>
+        <div><img src="phone_logo.png"Phone Icon"><strong>General Enquiry:</strong> +91 83 2289 9853 / 3944 / 5323 (Mon-Sat 10:00am - 7:00pm)</div><br>
+        <div><img src="phone_logo.png" alt="Admission Icon"><strong>Admission Enquiry:</strong> +91 95124 78527 / 98531 32153</div><br>
+        <div><img src="mail_logo.png" alt="Mail Icon"><strong>Mail:</strong> <a href="mailto:info@jisgroup.org">info@xyz.org</a> (24 x 7 online support)</div><br>
+        <div><img src="mail_logo.png" alt="Career Icon"><strong>Career:</strong> <a href="mailto:career@jisgroup.org">career@xyz.org</a> (Send your resume)</div><br>
     </div>
 
 
