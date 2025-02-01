@@ -93,16 +93,16 @@
         <iframe src="autoType.html" width="100%" height="300" class="border-0"></iframe>
 
         <div class="space-x-4">
-          <button class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-md hover:bg-yellow-300 transition">
-            Partner with Us
-          </button>
-          <button class="bg-white text-blue-900 px-6 py-3 rounded-md hover:bg-gray-200 transition">
-            Join a Program
-          </button>
-          <button
-            class="bg-transparent border border-yellow-400 text-yellow-400 px-6 py-3 rounded-md hover:bg-yellow-400 hover:text-blue-900 transition">
-            Contact Us
-          </button>
+        <a href="global.html" class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-md hover:bg-yellow-300 transition">
+         Partner with Us
+        </a>
+        <a href="pi.php" class="bg-white text-blue-900 px-6 py-3 rounded-md hover:bg-gray-200 transition">
+         Join a Program
+        </a>
+        <a href="contact.php" class="bg-transparent border border-yellow-400 text-yellow-400 px-6 py-3 rounded-md hover:bg-yellow-400 hover:text-blue-900 transition">
+         Contact Us
+        </a>
+
         </div>
       </div>
     </div>
