@@ -1,12 +1,33 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $organization = htmlspecialchars($_POST['organization']);
-    $contact = htmlspecialchars($_POST['contact']);
-    $email = htmlspecialchars($_POST['email']);
-    $partnershipType = htmlspecialchars($_POST['partnership-type']);
-    $message = htmlspecialchars($_POST['message']);
+// Database connection
+$host = "localhost";
+$dbname = "global_partnerships";
+$username = "root";
+$password = ""; // Default password for XAMPP is empty
 
-    // Handle the form data (e.g., save to a database or send an email)
-    echo "Thank you, $contact, for your inquiry regarding $partnershipType.";
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+}
+
+// Insert Data
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $organization = $_POST["organization"];
+    $contact = $_POST["contact"];
+    $email = $_POST["email"];
+    $partnershipType = $_POST["partnership-type"];
+    $message = $_POST["message"];
+
+    $sql = "INSERT INTO partnerships (organization, contact, email, partnership_type, message) VALUES (?, ?, ?, ?, ?)";
+    $stmt = $pdo->prepare($sql);
+    
+    try {
+        $stmt->execute([$organization, $contact, $email, $partnershipType, $message]);
+        echo "Form submitted successfully!";
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 }
 ?>
