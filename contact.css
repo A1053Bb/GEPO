@@ -75,8 +75,11 @@ button:hover {
 }
 
 .contact-info {
-    margin-top: 2em;
-}
+        margin-top: 2em;
+        display: block;  /* Ensure it's displayed */
+    }
+    
+
 
 .contact-info h3 {
     color: #002d62;
