@@ -36,26 +36,59 @@ $admin_name = $_SESSION['admin_username'];
         </nav>
         <div class="d-flex card-cont m-0 w-100 justify-content-center">
             <div class="d-flex flex-column mb-6 w-75 align-items-center">
-                <?php
-                $sections = [
-                    ["about_us.jpg", "About Us Section", "To edit the about us section click the button below"],
-                    ["global-part.jpg", "Global Partnerships Section", "To edit the global partnership's content"],
-                    ["prog_ini.jpg", "Programs & Initiatives Section", "To edit information in Programs & Initiatives Section"],
-                    ["re_su.jpg", "Resources & Support Section", "To edit information in Resources & Support Section"],
-                    ["e_n.jpg", "Events & News Section", "To edit information in Events & Support Section"],
-                    ["c_s.jpeg", "Contact & Support Section", "To edit information in Contact and Support Section"]
-                ];
-                foreach ($sections as $section) {
-                    echo "<div class='card sect-card my-3'>
-                            <img src='images/{$section[0]}' class='card-img-top card-1' alt='...'>
-                            <div class='card-body'>
-                                <h5 class='card-title'>{$section[1]}</h5>
-                                <p class='card-text'>{$section[2]}</p>
-                                <a href='#' class='btn btn-primary'>Edit Now</a>
-                            </div>
-                          </div>";
-                }
-                ?>
+                <div class="card sect-card my-3">
+                    <img src="images/about_us.jpg" class="card-img-top card-1" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">About Us Section</h5>
+                        <p class="card-text">To edit the about us section click the button below</p>
+                        <a href="#" class="btn btn-primary">Edit Now</a>
+                    </div>
+                </div>
+                <div class="card sect-card my-3 ">
+                    <img src="images/global-part.jpg" class="card-img-top card-1" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Global Partnerships Section</h5>
+                        <p class="card-text">To edit the global partnership's content</p>
+                        <a href="#" class="btn btn-primary">Edit Now</a>
+                    </div>
+                </div>
+                <div class="card sect-card my-3 ">
+                    <img src="images/prog_ini.jpg" class="card-img-top card-1" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Programs & Initiatives Section</h5>
+                        <p class="card-text">To edit information in Programs & Initiatives Section</p>
+                        <a href="edit_pi.php" class="btn btn-primary">Edit Now</a>
+                    </div>
+                </div>
+                <div class="card sect-card my-3 ">
+                    <img src="images/re_su.jpg" class="card-img-top card-1" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Resources & Support Section</h5>
+                        <p class="card-text">To edit information in Resources & Support Section</p>
+                        <a href="#" class="btn btn-primary">Edit Now</a>
+                    </div>
+                </div>
+                <div class="card sect-card my-3 ">
+                    <img src="images/e_n.jpg" class="card-img-top card-1" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Events & News Section</h5>
+                        <p class="card-text">To edit information in Events & Support Section</p>
+                        <div class="d-flex justify-content-around">
+                            <a href="edit_event_1.html" class="btn btn-primary">Edit Events Timeline</a>
+                            <a href="edit_event_2.html" class="btn btn-primary">Edit News</a>
+                            <a href="edit_event_3.html" class="btn btn-primary">Edit Gallery</a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="card sect-card my-3">
+                    <img src="images/c_s.jpeg" class="card-img-top card-1" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Contact & Support Section</h5>
+                        <p class="card-text">To edit information in Contact and Support Section</p>
+                        <a href="#" class="btn btn-primary">Edit Now</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -59,9 +59,9 @@
           <button class="profile-button bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 focus:outline-none py-3 px-8 rounded-md text-xl font-semibold shadow-lg transition-all duration-300">My Profile</button>
 
           <ul class="absolute hidden profile-dropdown bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg rounded-lg mt-2 min-w-max left-0 md:right-0 transition-all duration-300 ease-in-out">
-            <li>
+            <!-- <li>
               <a href="admin.html" class="block px-6 py-3 hover:bg-blue-700 rounded-t-md transition-all duration-200 ease-in-out">Control Panel</a>
-            </li>
+            </li> -->
             <li>
               <button id="admin-register-toggle" class="block w-full text-left px-6 py-3 hover:bg-purple-500 rounded-b-md transition-all duration-200 ease-in-out">
                 Admin Login
